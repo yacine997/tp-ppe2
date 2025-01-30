@@ -14,26 +14,30 @@ $lesNationalites=$req->fetchALL();
 
 <div class="row pt-3">
     <div class="col-9"> <h2>Liste des nationalités</h2></div>
-    <div class="col63">a href="" class= 'btn btn success'></a> </div>
+    <div class="col-3"><a href="" class='btn btn-success'><i class="f fas fa-plus-circle" ></i> Créer une nationalité</a> </div>
    
 </div>
 
 
 <table class="table">
   <thead>
-    <tr>
-      <th scope="col">Numéro</th>
-      <th scope="col">Libellé</th>
-      <th scope="col">Action</th>
+    <tr class="d-flex">
+      <th scope="col"class="col-md-2">Numéro</th>
+      <th scope="col"class="col-md-8">Libellé</th>
+      <th scope="col"class="col-md-2">Action</th>
     </tr>
   </thead>
   <tbody>
     <?php
     foreach($lesNationalites as $nationalite){
-      echo "<tr>";
-      echo "<td>$nationalite->num</td>";  
-      echo "<td>$nationalite->libelle</td>";
-      echo "<td></td>";  
+      echo "<tr class='d-flex'>";
+      echo "<td class='col-md-2'>$nationalite->num</td>";  
+      echo "<td class='col-md-8'>$nationalite->libelle</td>";
+      echo "<td class='col-md-2'>
+           <a href='' class='btn btn-primary'><i class='f fas fa-pen' ></i></a> 
+           <a href='' class='btn btn-danger'><i class='f far fa-trash-alt'></i></a> 
+      </td>";  
+     
       echo "</tr>";
     }
     ?>
