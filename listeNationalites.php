@@ -14,7 +14,7 @@ $lesNationalites=$req->fetchALL();
 
 <div class="row pt-3">
     <div class="col-9"> <h2>Liste des nationalités</h2></div>
-    <div class="col-3"><a href="formAjoutnationalite.php" class='btn btn-success'><i class="f fas fa-plus-circle" ></i> Créer une nationalité</a> </div>
+    <div class="col-3"><a href="formNationalite.php?action=Ajouter" class='btn btn-success'><i class="f fas fa-plus-circle" ></i> Créer une nationalité</a> </div>
    
 </div>
 
@@ -34,20 +34,20 @@ $lesNationalites=$req->fetchALL();
       echo "<td class='col-md-2'>$nationalite->num</td>";  
       echo "<td class='col-md-8'>$nationalite->libelle</td>";
       echo "<td class='col-md-2'>
-           <a href='formModifNationalite.php?num=$nationalite->num' class='btn btn-primary'><i class='f fas fa-pen' ></i></a> 
-           <a href='' class='btn btn-danger'><i class='f far fa-trash-alt'></i></a> 
+           <a href='formNationalite.php?action=Modifier&num=$nationalite->num' class='btn btn-primary'><i class='f fas fa-pen' ></i></a> 
+           <a href='#modalSuppression' data-toggle='modal' data-message='Voulez vous supprimer cette nationalité'  data-suppression='supprimerNationalite.php?num=$nationalite->num' class='btn btn-danger'><i class='f far fa-trash-alt'></i></a> 
       </td>";  
-     
       echo "</tr>";
     }
+
     ?>
     
 </tbody>
 </table>
-</div>
-</main>
 
+</div>
 <?php include "footer.php";
 
+?>
 
 

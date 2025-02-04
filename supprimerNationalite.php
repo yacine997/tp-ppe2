@@ -1,10 +1,10 @@
 
 <?php include "header.php";
 include "connexionPdo.php";
-$libelle=$_POST['libelle']; // je récupère le libellé du formulaire
+$num=$_GET['num'];
 
-$req=$monPdo->prepare("insert into nationalite(libelle) values(:libelle)");
-$req->bindParam(':libelle', $libelle);
+$req=$monPdo->prepare("delete from nationalite where num = :num");
+$req->bindParam(':num', $num);
 $nb=$req->execute();
 
 echo '<div class="container mt-5">';
@@ -12,12 +12,11 @@ echo '<div class="row">
     <div class="col mt-3">';
 if($nb == 1) {
     echo ' <div class="alert alert-success" role="alert">
-    La nationalité a bien été ajoutée
-    </div> ';
+    La nationalité a bien été supprimée </div> ';
+    
 }else{
     echo ' <div class="alert alert-danger" role="alert">
-    La nationalité n\'a pas été ajoutée !
-    </div> ';
+    Petit problème : La nationalité n\'a pas été supprimer </div> ';
 } 
 ?>
 </div>
