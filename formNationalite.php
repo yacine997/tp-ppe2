@@ -1,7 +1,7 @@
 
 <?php include "header.php";
 include "connexionPdo.php";
-$action=$_GET['action']; // soit Ajouter ou modifier
+$action=$_GET['action']; 
 
 if($action == "Modifier"){
     $num=$_GET['num'];

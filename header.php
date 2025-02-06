@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,13 +10,12 @@
     <title>super site</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/jumbotron/">
-   <!-- Bootstrap core CSS -->
+
    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.css">
    <script src="https://kit.fontawesome.com/17e9617dd6.js" crossorigin="anonymous"></script>
 
 
 
-    <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -44,7 +44,7 @@
     </style>
 
     
-    <!-- Custom styles for this template -->
+
     <link href="jumbotron.css" rel="stylesheet">
   </head>
   <body>
@@ -76,7 +76,7 @@
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-flag"></i> Gestion des nationalités</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="listeNationalites.php">Liste les nationalités</a>
-          <a class="dropdown-item" href="formAjoutNationalite.php">Ajouter une nationalité</a>
+          <a class="dropdown-item" href="formNationalite.php">Ajouter une nationalité</a>
         </div>
       </li>
     </ul>

@@ -2,8 +2,8 @@
 <?php include "header.php";
 include "connexionPdo.php";
 $action=$_GET['action'];
-$num=$_POST['num']; // je récupère le libellé du formulaire
-$libelle=$_POST['libelle']; // je récupère le libellé du formulaire
+$num=$_POST['num']; 
+$libelle=$_POST['libelle']; 
 
 if($action == "Modifier"){
     $req=$monPdo->prepare("update nationalite set libelle = :libelle where num = :num");
